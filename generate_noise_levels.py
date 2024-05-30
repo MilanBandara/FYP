@@ -56,7 +56,7 @@ def add_translation(shift_x, shift_y, image):
     return shifted_image
         
 
-image = plt.imread('F:\FYP\FYP\motion_blur_repo\png_scans\scan_000159\standard_000159_png.png')
+image = plt.imread('F:\FYP\FYP\MRART_png_scans\scan_000103\standard_000103_png.png')
 image = cv2.rotate(image, cv2.ROTATE_90_COUNTERCLOCKWISE)
 
 magnitude_spectrum,fft_result_shifted = fourier_transform(image)
