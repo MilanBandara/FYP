@@ -1,4 +1,10 @@
 import numpy as np
+from skimage.metrics import structural_similarity as compare_ssim
+
+# Structural Similarity Index (SSIM)
+def structural_similarity_index(y_true, y_pred):
+    ssim, _ = compare_ssim(y_pred, y_true, full=True)
+    return 1-ssim
 
 # Mean Squared Error (MSE)
 def mean_squared_error(y_true, y_pred):
@@ -18,7 +24,7 @@ def mean_absolute_error(y_true, y_pred):
     return np.mean(np.abs(y_true - y_pred))
 
 # Mean Absolute Percentage Error (MAPE)
-def mean_absolute_error(y_true, y_pred):
+def mean_absolute_percentage_error(y_true, y_pred):
     return np.mean(np.abs(y_true - y_pred))/np.max(y_pred)
 
 # Peak Signal to Noise Ratio (PSNR)
