@@ -13,3 +13,6 @@ __pycache__
 MRART_png_scans
 FigshareDataset
 FigshareDataset.zip
+FigshareDatasetWithTestData
+FigshareDatasetWithTestData.zip
+Artifact_removal_models
